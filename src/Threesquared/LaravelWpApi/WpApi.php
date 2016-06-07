@@ -164,6 +164,28 @@ class WpApi
     }
 
     /**
+     * Retrieve a User
+     *
+     * @param  int $year
+     * @return array
+     */
+    public function user($id)
+    {
+        return $this->get('users/' . $id);
+    }
+
+    /**
+     * Retrieve a Category
+     *
+     * @param  int $year
+     * @return array
+     */
+    public function category($id)
+    {
+        return $this->get('categories/' . $id);
+    }
+
+    /**
      * Get data from the API
      *
      * @param  string $method
