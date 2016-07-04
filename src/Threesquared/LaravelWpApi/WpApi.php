@@ -150,6 +150,11 @@ class WpApi
         return $this->get('posts', ['page' => $page, 'filter' => ['s' => $query]]);
     }
 
+    public function searchPostBySlug($slug, $page = null)
+    {
+        return $this->get('posts', ['page' => $page, 'filter' => ['slug' => $slug]]);
+    }
+
     /**
      * Get posts by date
      *
